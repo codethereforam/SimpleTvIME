@@ -84,7 +84,7 @@ body {
 	font-family: "Microsoft YaHei",Arial,sans-serif
 }
 
-#confirm,.btn-wrapper,.history,.keys {
+#mode,.btn-wrapper,.history,.keys {
 	-webkit-user-select: none;
 	-webkit-touch-callout: none
 }
@@ -154,8 +154,8 @@ body {
 }
 
 /*input buttons */
-#confirm {
-	width: 50%;
+#mode {
+	width: 20%;
 	height: 30px;
 	border-radius: 2px;
 	border: 0px;

@@ -14,15 +14,15 @@
 
   <article class="tabs"> 
     <ul class="header-tab">
-      <li class="active" data-tab="tab1">电视遥控器</li>
-      <li data-tab="tab2">远程输入法</li>
+      <li data-tab="tab1">电视遥控器</li>
+      <li class="active" data-tab="tab2">远程输入法</li>
     </ul>
 
   <!--  tabs content -->
    <div class="panels"> 
 
    <!-- tab 1 contents -->
-    <div class="panel active" id="tab1"> 
+    <div class="panel" id="tab1">
      <div class="keys"> 
       <div id="direction-btns" class="direction-btns"> 
        <div class="otherbtn home-btn" id="home-btn" data-key="3" data-bp="-586px -315px"></div> 
@@ -41,16 +41,16 @@
     </div> 
 
     <!-- tab 2 -->
-    <div class="panel" id="tab2"> 
+    <div class="panel active" id="tab2">
 
         <div class="inputarea-wrapper"> 
-         <textarea id="inputarea" rows="2" placeholder="What you want ?"></textarea> 
+         <textarea id="inputarea" rows="2" placeholder="What you want ?" autofocus></textarea>
         </div> 
 
        <div class="btn-line"> 
         <input type="button" value="删除" class="btn" id="btnDel" data-key="67" />
         <!-- <div id="confirm" class="btn-nowd btn-wd">Submit</div>  -->
-        <button id="confirm" class="btn">提交</button>
+        <button id="mode" class="btn" isChineseInput="true">中</button>
         <input type="button" value="清空" class="btn" id="btnCls" data-key="68" />
        </div> 
 
