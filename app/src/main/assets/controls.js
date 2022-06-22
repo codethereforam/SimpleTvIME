@@ -103,25 +103,29 @@ let _inputArea = document.getElementById('inputarea');
 _inputArea.addEventListener('compositionend', () => {
     if (_mode.getAttribute('isChineseInput') === 'true') {
         var text = $("#inputarea").val();
-        console.log('input : ' + text)
-        sendText(text);
+        // console.log('input1 : |' + text + "|")
+        sendText(text.trim());
         _inputArea.value = "";
     }
 });
 
 _inputArea.addEventListener('keyup', (event) => {
-    // console.log($("#inputarea").val() + "," + event.code+ "," +event.key+ "," +event.keyCode+ "," +event.type)
+    // console.log("|" + $("#inputarea").val() + "|," + event.code+ "," +event.key+ "," +event.keyCode+ "," +event.type)
     const key = event.key;
     if (_mode.getAttribute('isChineseInput') === 'true') {
         if (key === "Backspace" || key === "Delete") {
             sendKeyCode(67)
         }
+        if (event.keyCode === 32) {
+            sendText(' ');
+        }
     } else {
         if (key === "Backspace" || key === "Delete") {
             sendKeyCode(67)
         } else {
-            console.log('input : ' + key)
-            sendText(key);
+            var text = $("#inputarea").val();
+            // console.log('input2: |' + text + "|")
+            sendText(text);
             _inputArea.value = "";
         }
     }
