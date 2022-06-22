@@ -95,7 +95,7 @@ public class ServerInputMethodService extends InputMethodService {
 
     public void onEventMainThread(RemoteInputEvent event) {
         Log.e("", "@@@ " + event) ;
-        clearText();
+//        clearText();
         getCurrentInputConnection().commitText(event.text, 1) ;
     }
 
